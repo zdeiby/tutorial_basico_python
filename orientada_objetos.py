@@ -25,8 +25,16 @@ class RationalNumber():
             self.denominator=d
         else:
             print("el numerador y el denominador debe ser enteros")
+    def __str__(self):
+        return "{} / {}".format(self.numerator, self.denominator)
 
-ec1=RationalNumber(1,2)
+    def mathFormat(self):
+        from IPython.display import display, Latex
+        display(Latex(f"${self.numerator}\\over{self.denominator}$"))
+
+q=RationalNumber(2,4)
+q.mathFormat()
+print(q)
 
 #ejercicio 3
 
